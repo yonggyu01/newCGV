@@ -5,7 +5,7 @@
 // 선택된 a태그에 효과를 주면 될것같다.
 // 변수는 각각 클래스 2개마다 하나씩 잡고
 // 함수는 클래스를 추가하고   클래스르 ㄹ빼주는 함수와
-// 클릭이벤트  두가지만 만들면 됨
+
 
 var Playmovie = document.querySelectorAll('.play_stop a')
 var Sound = document.querySelectorAll('.playmusic') 
