@@ -1,0 +1,202 @@
+git 사용하는 이유
+
+작업상태 확인
+버전관리 용이함 (vcs : version control system)
+
+svn (subversion)
+중앙집중식
+기능이 완성된 형태로 commit
+
+git
+분산형 버전 관리
+개발자 별 commit history
+개발자 repositiory저장소와 서버 repository를 독립적으로 운영
+
+특징
+대부분으 ㅣ명령을 로컬에서 수행 -> 로컬이 반대말은 remote
+원격 저장소의 정보가 필요할 때마 연결 (pull , push)
+오프라인 환경에서도 commit
+
+설치
+
+다운로드
+http://git-scm.com
+
+사용자 구분을 위한 git 설정
+
+--global 옵션으로 모든 포르젝트에 설정 적용
+
+콘솔 실행
+
+git  > git cmd 또는 git bash
+
+사용자 설정
+
+git config --global user.name '사용자 이름'
+git config --global user.email '메일 주소'
+git config --unset user.name ->이름삭제
+git config --unset user.email -> 메일삭제
+
+사용자 이름은 여러개 설정 불가  덧씌워짐
+
+
+git문제는 
+
+디렉토리 이동
+목록확인 dir 또는 ls
+ 경로이동 cd 디렉토리명
+
+
+
+설정 확인
+git config --list
+git config user.name  
+
+
+저장소 repositiory
+*저장소 생성
+ - 로컬 저장소로 저장할 폴더 생성
+  - 사용할 폴더 이동 ( cd 디렉토리 경로)
+   -  새로운 저장소 생성
+   git init
+   해당폴더에 .git 폴더 생성 확인
+
+.git 
+ - 프로젝트 관리를 위한 파일
+ - 해당 프로젝트에만 적용할 config 파일 등
+
+
+상태확인
+git status
+
+on branch master (또는 main)
+master 라는 기본 가지 (branch)사용
+
+no commits yet
+ commit 한 내역 없음
+
+
+
+ 주요 명령어
+
+ add 
+ 커밋할 목록에 추가
+
+ rm  삭제
+
+
+ commit 
+ 커밋 (히스토리의 한 단위) 만들기
+ commit -m "적고싶은 내용 작성"
+
+
+ push
+ 현재까지의 내용을 github에 전달
+
+ pull 
+ 로컬 저장소를 원격 저장소에 맞춰 갱신
+
+
+
+ working directory   add  ->  index (stage)   -> commit  -->  head -repository 
+
+ working directory 작업폴더
+
+ index (stage) 준비영역
+
+ head repositiory 저장소
+
+ 추가 (untracked files) 또는 변경 (modified files) 하고자 하는 파일을 인덱스에 기록 (stage)후
+ staging 된 목록만 저장소에 commit
+
+수정하고 저장함
+그냥 수정했음
+
+
+
+실습
+
+사용할 폴더에 파일생성 후
+파일목록 확인 ls 또는 dir
+상태확인 (수시확인) git status
+
+파일을 인덱스에 스테이지 : git add [파일명]
+전체파일 스테이지  : git add .
+
+"changes to be committed " 에서 staged 파일 확인
+
+확정 : git commit -m [설명 작성]
+
+git commit -a : add 와 commit을 동시에 실행
+
+git log : history 확인
+
+add  취소
+
+선택한 파일  : git restore --staged [파일명]
+전체파일 git restore --staged .
+또는 git rm --cached [파일명]
+
+commit 취소
+ 선택한 파일 git reset HEAD [파일명]
+ 전체 파일 : git reset HEAD
+
+ 취소한 commit 복원
+ git reset [옵션] ORIG_HEAD
+
+
+commit 취소
+commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
+
+git reset --soft HEAD^
+
+commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
+ git reset --mixed HEAD^  //기본옵션
+ git reset HEAD^ // 위와 동일
+ git reset HEAD~2 // 마지막 2개의 commit을 취소하고
+ commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
+
+ git reset --hard HEAD^
+
+
+ commit 메시지 변경하기
+
+ git commit --amend
+ git commit --amend -m "수정할 commit message"
+
+원격 저장소 확인 :  git remote add name url
+                : git remote -v
+
+원격 저장소 이름 변경
+git remote rename [기존이름 ]  [새로운 이름]
+
+원격저상소의 브랜치 이름도 변경됨
+
+원격 저장소 삭제
+git remote rm [저장소 이름]
+
+원격 서버 주소설정
+
+git remote add 저장하고싶이름 [원격서버주소]
+git remote add origin [원격서버주소]  <-통상적으로 origin을 사용한다함
+origin : remote repository (원격 저장소) 이름, 다른 이름도 무관
+원격 서버 주소  : github 에서 확인
+git remot rename origin paparazzi  -> paparazzi로 변경됨
+git remote rm name 하면 지워짐
+
+
+push 
+로컬 저상소 변경 내용을 원격 서버로 보내기
+git push [원격저장소이름] [push할 가지 이름]
+git push origin master (또는 main)
+
+전송되지 않을 때 강제 전송
+git push origin master -f
+
+pull
+로컬 저장소를 원격 저장소에 맞춰 갱신
+
+git pull [원격저장소이름] [push할 가지 이름]
+원격 저장소의 변경 내용이 로컬 작업 디렉토리에 받아지고 (fetch), 병합 (merge)
+
+흠
