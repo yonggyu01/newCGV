@@ -6,7 +6,8 @@
     <title>CGV</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/cgvindex.js"></script>
+    <script src="js/cgv.js">
+    </script>
 </head>
 <body>
     <div id="cgvWrap">
@@ -16,7 +17,6 @@
         </div>    
 
         <div class="fixedNav">
-      
             <div class="fixedNav_wrap">
                 <h2><a href="https://www.cgv.co.kr/"><img src="img/logoWhite.png" alt=""></a></h2>
                 <ul class="nav_menu">
@@ -96,7 +96,7 @@
             <div class="adTop">
                 <div class="adTop_wrap">
                     <img src="img/adtop_banner.jpg" alt="">
-                    <a href="">
+                    <a href="#none">
                         <img src="img/btn_ad_close.png" alt="" class="btn_close">
                     </a>
                 </div>
@@ -112,7 +112,7 @@
                 
                 <div class="member">
                     <div class="ad_partner">
-                        <a href=""><img src="img/top_small_banner.png" alt=""></a>
+                        <a href="#none"><img src="img/top_small_banner.png" alt=""></a>
                     </div>
                     <ul class=login_menu>
                         <li><a href=""><img src="img/loginPassword.png" alt="">로그인</a></li>
@@ -124,13 +124,14 @@
             </div>
 
             <nav>
-        
                 <div class="nav_wrap">
-                    <div class="whitePlace"></div>
+                    <div class="nav_bg">
+                        
+                    </div>
                     <ul class="nav_menu">
                         <li>
                             <a href="">영화</a>
-                            <dl class="sub_menu q1"> 
+                            <dl class="sub_menu"> 
                                 <dt><a href="">영화</a></dt>
                                 <dd><a href="">무비차트</a></dd>
                                 <dd><a href="">아트하우스</a></dd>
@@ -143,7 +144,7 @@
                                 <dt><a href="">극장</a></dt>
                                 <dd><a href="">CGV 극장</a></dd>
                                 <dd><a href="">특별관</a></dd>
-                            </dl>
+                            </dl> 
                         </li>
                         <li>
                             <a href=""><strong>예매</strong></a>
@@ -153,7 +154,6 @@
                                 <dd><a href="">English Ticketing</a></dd>
                                 <dd><a href="">English Schedule</a></dd>
                             </dl>
-                        </li>
                         <li>
                             <a href="">스토어</a>
                             <dl class="sub_menu"> 
@@ -237,8 +237,8 @@
                     </div>
 
                     <div class="slide_btn">
-                        <div class="slide_btn_prev"></div>
-                        <div class="slide_btn_next"></div>
+                        <div id="chart_slide_btn_prev" class="slide_btn_prev"></div>
+                        <div id="chart_slide_btn_next" class="slide_btn_next"></div>
                     </div>
 
                     <div class="slide_wrap">
@@ -600,8 +600,8 @@
                 </div>
 
                 <div class="slide_btn">
-                    <div class="slide_btn_prev"></div>
-                    <div class="slide_btn_next"></div>
+                    <div id="event_slide_btn_prev" class="slide_btn_prev"></div>
+                    <div id="event_slide_btn_next" class="slide_btn_next"></div>
                 </div>
 
                 <div class="event_wrap">
@@ -678,31 +678,30 @@
                 </div>
 
                 <div class="specialHall_wrap">
-                    <div class="speimgbox">
-                        <img src="img/special01.png" alt="" id="specialHall_img">
-                        <img src="img/special02.png" alt="" id="specialHall_img">
-                        <img src="img/special03.png" alt="" id="specialHall_img">
-                        <img src="img/special04.png" alt="" id="specialHall_img">
+                    <div class="specialHall_img">
+                        <img src="img/special01.png" alt="" id="special_img">
+                        <!-- <img src="img/special02.png" alt="" >
+                        <img src="img/special03.png" alt="" >
+                        <img src="img/special04.png" alt="" > -->
                     </div>
-                    
 
                     <ul class="specialHall_list">
-                        <li class="specialHall_item01 active" onmouseover="changeImg('img/special01.png')">
+                        <li class="specialHall_item active" data-id="img/special01.png" >
                             <a href="http://www.cgv.co.kr/theaters/special/defaultDetailNew.aspx?idx=7">
                                 <strong>SUITE CINEMA</strong><span class="specialHall_hashTag">#호텔 컨셉의 프리미엄관</span>
                             </a>
                         </li>
-                        <li class="specialHall_item02" onmouseover="changeImg('img/special02.png')">
+                        <li class="specialHall_item" data-id="img/special02.png"> 
                             <a href="http://www.cgv.co.kr/theaters/special/defaultDetailNew.aspx?idx=14">
                                 <strong>CINE ＆ LIVINGROOM</strong><span class="specialHall_hashTag">#신개념 소셜 상영관</span>
                             </a>
                         </li>
-                        <li class="specialHall_item03" onmouseover="changeImg('img/special03.png')">
+                        <li class="specialHall_item" data-id="img/special03.png">
                             <a href="http://www.cgv.co.kr/theaters/special/defaultDetailNew.aspx?idx=2">
                                 <strong>4DX</strong><span class="specialHall_hashTag">#모션시트 #오감체험</span>
                             </a>
                         </li>
-                        <li class="specialHall_item04" onmouseover="changeImg('img/special04.png')">
+                        <li class="specialHall_item" data-id="img/special04.png">
                             <a href="http://www.cgv.co.kr/theaters/special/defaultDetailNew.aspx?idx=8">
                                 <strong>CINE de CHEF</strong><span class="specialHall_hashTag">#쉐프가 있는 영화관</span>
                             </a>
@@ -916,7 +915,7 @@
                     <section class="familysite">
                         <div class="familysite_wrap">
                             <h3><a href="#none">계열사 바로가기</a></h3>
-                            <dl>
+                            <dl class="familysite_list">
                                 <dt>&nbsp;&nbsp;&nbsp;CJ그룹</dt>
                                     <dd>&nbsp;&nbsp;CJ주식회사</dd>
                                 <dt>&nbsp;&nbsp;&nbsp;식품 및 식당서비스</dt>
@@ -944,6 +943,8 @@
         </footer>
         
     </div>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="js/cgv.js"></script>
 </body>
 </html>

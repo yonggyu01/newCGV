@@ -51,11 +51,8 @@
     padding: 10px 0;
     background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
     display: none;
-    position: relative;
     z-index: 5;
 }
-
-
 
 .fixedNav_wrap {
     width: 980px;
@@ -104,11 +101,8 @@
     border-right: 1px solid #cacaca;
 }
 
-
 /*header*/
-header {
-    /* border-bottom: 2px solid #fb4357; */
-}
+header {}
 
 /*header adTop*/
 .adTop {
@@ -147,7 +141,7 @@ header {
     font-size: 16px;
     color: #222;
     letter-spacing: 0.313em;
-    line-height: 1.500em;
+    line-height: 1.5em;
 }
 
 /*header headerTop member*/
@@ -180,23 +174,9 @@ header {
 
 /*header nav*/
 nav {
+    position: relative;
     border-top: 1px solid #ececec;
-}
-
-.whitePlace {
-    position: absolute;
-    width: 100%;
-    height: 0px;
-    top: 243px;
-    left: 0;
-    background-color: white;
-    transition: all 0.5s;
-    border-top: 2px solid #fb4357;
-}
-
-nav :hover .whitePlace,
-nav :hover .sub_menu {
-    height: 280px;
+    border-bottom: 2px solid #fb4357;
 }
 
 .nav_wrap {
@@ -205,18 +185,28 @@ nav :hover .sub_menu {
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
+}
 
+.nav_bg {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 52px;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.5s;
+    z-index: 1;
 }
 
 .nav_menu {
-    display: inline-flex;
     position: relative;
+    display: inline-flex;
 }
 
 .nav_menu li {
+    width: 83px;
     margin-right: 20px;
     line-height: 40px;
-    width: 83px;
 }
 
 .nav_menu li a {
@@ -233,17 +223,45 @@ nav :hover .sub_menu {
 
 .sub_menu {
     position: absolute;
-    margin-top: 4px;
+    z-index: 2;
+    padding-top: 15px;
     width: 100%;
-    height: 0px;
-    background: #fff;
-    z-index: 1;
-    border-top: 1px solid #fb4357;
-    transition: 0.5s all;
+    height: 0;
+    transition: all 0.5s;
     overflow: hidden;
 }
 
-.nav_menu>li:first-child>dl {
+.sub_menu:after {
+    content: "";
+    position: absolute;
+    left: 150px;
+    top: 0;
+    margin-top: 30px;
+    width: 1px;
+    height: 180px;
+    box-sizing: border-box;
+    background: #e2e2e2;
+}
+
+
+.sub_menu dt a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+}
+
+.sub_menu dd {
+    line-height: 18px;
+}
+
+.sub_menu dd a {
+    font-weight: 400;
+    font-size: 13px;
+    color: #666;
+    line-height: 2em;
+}
+
+.nav_menu>li:nth-child(1)>dl {
     left: 0px;
 }
 
@@ -269,44 +287,7 @@ nav :hover .sub_menu {
 
 .nav_menu>li:nth-child(6)>dl::after {
     width: 0;
-
 }
-
-.sub_menu:after {
-    content: "";
-    position: absolute;
-    left: 130px;
-    top: 20px;
-    width: 1px;
-    height: 200px;
-    background: #e2e2e2;
-}
-
-.sub_menu dl {
-    padding: 0 20px;
-    width: 800px;
-}
-
-.sub_menu dt {}
-
-.sub_menu dt a {
-    font-weight: 700;
-    font-size: 14px;
-    color: #222;
-}
-
-.sub_menu dd {
-    line-height: 18px;
-}
-
-.sub_menu dd a {
-    font-weight: 400;
-    font-size: 13px;
-    color: #666;
-    line-height: 1.8em;
-}
-
-/* 마우스 오버 시 나타나는 기능*/
 
 
 /*header nav search_wrap*/
@@ -555,6 +536,8 @@ video {
     display: flex;
     gap: 31px;
     counter-reset: number;
+    transition: all 0.5s;
+    left: 0;
 }
 
 .slide_list li {
@@ -610,7 +593,6 @@ video {
 
 .movieDay {
     position: absolute;
-
 }
 
 .screenType {
@@ -773,8 +755,6 @@ li:hover .img_wrap:after {
     background: url(../img/stop.png) center center / 8px 12px no-repeat;
 }
 
-/* 움직이는 효과 */
-
 
 
 
@@ -792,23 +772,11 @@ li:hover .img_wrap:after {
     justify-content: space-between;
 }
 
-.active1 {
-    display: block;
-}
-
-.speimgbox {
+#specialHall_img {
     position: relative;
     width: 500px;
     height: 260px;
     overflow: hidden;
-
-}
-
-#specialHall_img {
-    position: absolute;
-    top: 0;
-    width: 500px;
-    height: 260px;
 }
 
 .specialHall_list {
@@ -1203,19 +1171,6 @@ address {
     background: url(../img/arrow_D.png) 146px no-repeat;
 }
 
-.familysite_wrap dl {
-    position: absolute;
-    bottom: 65px;
-    width: 172px;
-    font-size: 11px;
-    line-height: 2em;
-    background: #fff;
-    color: #666;
-    border: 1px solid #d8d8d8;
-    box-shadow: 5px 0px 20px 0px #e4e4e4;
-    display: none;
-}
-
 .familysite_wrap dt {
     font-weight: 600;
     line-height: 2em;
@@ -1228,6 +1183,23 @@ address {
 .familysite_wrap dd:hover {
     background: #666;
     color: #fff;
+}
+
+.familysite_list {
+    position: absolute;
+    bottom: 65px;
+    width: 172px;
+    font-size: 11px;
+    line-height: 2em;
+    background: #fff;
+    color: #666;
+    border: 1px solid #d8d8d8;
+    box-shadow: 5px 0px 20px 0px #e4e4e4;
+    display: none;
+}
+
+.on {
+    display: block;
 }
 
 .go {
