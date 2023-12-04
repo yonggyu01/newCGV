@@ -203,7 +203,7 @@ nav{
         transition: all 0.5s;
         overflow: hidden;
     }
-    /* .sub_menu:after{
+    .sub_menu:after{
         content: "";
         position: absolute;
         left: 150px;
@@ -211,7 +211,7 @@ nav{
         width: 1px;
         height: 210px;
         background: #e2e2e2;
-    } */
+    } 
     .sub_menu dt a{ 
         font-size: 14px;
         font-weight: 700;
@@ -676,11 +676,14 @@ li:hover .img_wrap:after {
     display: flex;
     justify-content: space-between;
 }
-#specialHall_img{
+.specialHall_img{
     position: relative;
     width: 500px;
     height: 260px;
     overflow: hidden;
+}
+.specialHall_img img{
+    width: 100%;
 }
 .specialHall_list{
     width: 440px;
