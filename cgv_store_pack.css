@@ -20,7 +20,7 @@ a,address{
 }
 /* 초기화  */
 .font_red{
-    color :orangered !important;
+    color: orangered !important;
 }
 .main{
     min-width: 1040px;
@@ -55,7 +55,7 @@ font-weight: bold;}
 .storegiftcon li span{
     display: inline-block;
     width: 20px;
-    height: 20px;
+    height: 20px;   
     background-color: red;
     border-radius: 50%;
     text-align: center;
@@ -80,32 +80,28 @@ font-weight: bold;}
     margin-bottom: 20px;
     width: 100%;
    
-}
-.storemainwrapbox>ul{
+}.storemainwrapbox>ul{
     display: flex;
     flex-flow: row wrap;
     width: 980px;
 }
-/* .storemainwrapbox>ul>li:first-child{
-    width: 100%;
-    margin-bottom: 70px;
-} */
-.storemainwrapbox>ul ul li>div{
-    display: flex;
-    flex-direction: column;
-    padding-left: 15px; 
-    box-sizing: border-box;
-}
-.storemainwrapbox>ul>li:first-child ul{
+
+.storemainwrapbox>ul ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-around; */
+    gap : 50px
+}
+.storemainwrapbox>ul>li>ul>li>div{
+    width: 270px;
 }
 .storemainwrapbox h3{
     font-size: 1.2em;
-    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .storemainwrapbox>ul>li:first-child ul li a img{
     width: 270px;
@@ -116,25 +112,23 @@ font-weight: bold;}
     font-weight: bold;
 }
 
-.storemainwrapbox>ul ul li>div p:not(.packbold){
+
+.storemainwrapbox p:not(.packbold){
     color: #666;
-
     margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
-.giftcardwrap{
-    /* padding-left: 20px; */
+.packwrap{
     position: relative;
-    box-sizing: border-box;
 }
 .packhoverwrap{
-    width: 100%;
     position: relative;
 }
 
 
-
-.hoverbox{
+.hoverbox1{
     position: absolute;
     top:0;
     display: none;
@@ -145,7 +139,7 @@ font-weight: bold;}
     justify-content: space-evenly;
 
 }
-.hoverbox a{
+.hoverbox1 a{
     display: flex;
     align-items: center;
     width: 50px;
@@ -174,15 +168,15 @@ font-weight: bold;}
 }
 
 
-.hoverbox a:first-child:hover{
+.hoverbox1 a:first-child:hover{
     background-position: -157px 0px;
 }
-.hoverbox a:nth-child(2):hover{
+.hoverbox1 a:nth-child(2):hover{
     background-position: -209px 0px;
 }
-.hoverbox a:nth-child(3):hover{
+.hoverbox1 a:nth-child(3):hover{
     background-position: -261px 0px;
 }
-.storemainwrapbox>ul>li>ul>li>div:hover .hoverbox{
+.storemainwrapbox>ul ul>li>div:hover .hoverbox1{
     display: flex;
 }

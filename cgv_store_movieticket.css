@@ -29,7 +29,7 @@ a,address{
     width: 980px;
     margin: 0 auto;
 }
-h1{font-size: 2em;
+.main h1{font-size: 2em;
     border-bottom:  3px solid black;
     padding:30px 0  15px;
 }
@@ -45,12 +45,12 @@ h1{font-size: 2em;
 font-weight: bold;}
 .storegiftcon{
     display: flex;
-    width: 25%;
+    width: 35%;
     justify-content: space-evenly;
 }
 .storegiftcon li:first-child {
     border-left: 1px solid #666;
-    padding-left: 10px;
+    padding-left: 30px;
 }
 .storegiftcon li span{
     display: inline-block;
@@ -63,7 +63,7 @@ font-weight: bold;}
 }
 .storetapmenu ul:first-child{
     display: flex;
-    width: 75%;
+    width: 65%;
     justify-content: space-between;
 }
 .storetapmenu a{
@@ -72,7 +72,7 @@ font-weight: bold;}
     font-weight: bold
 }
 
-h2{
+.storemainwrapbox h2{
     font-size: 1.5em;
     position: relative;
     padding-bottom: 10px;
@@ -85,18 +85,20 @@ h2{
     flex-flow: row wrap;
     width: 980px;
 }
-.storemainwrapbox>ul>li:first-child{
-    width: 100%;
-    margin-bottom: 70px;
-}
+
 .storemainwrapbox>ul>li:first-child ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    gap : 50px
 }
-h3{
+.storemainwrapbox>ul>li>ul>li>div{
+    width: 270px;
+
+}
+.storemainwrapbox h3{
     font-size: 1.2em;
 }
 .storemainwrapbox>ul>li:first-child ul li a img{
@@ -109,11 +111,65 @@ h3{
 }
 
 
-.moviewrap p:not(:last-child){
+.storemainwrapbox p:not(.packbold){
     color: #666;
     margin-bottom: 10px;
 }
 .moviewrap{
-    padding-left: 20px;
     position: relative;
+}
+
+
+
+.hoverbox{
+    position: absolute;
+    top:0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.223);
+    width: 270px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.hoverbox a{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0b0b0b93;
+    background-image: url(images/bg_icon_setBtn.png);
+    white-space: wrap;
+    font-size: 17px;    
+    color : white;
+    vertical-align: middle;
+    text-align: center;
+    text-indent: -9999px;
+    background-repeat: no-repeat
+    ;
+}
+.hoverbox a:first-child,.hoverbox1 a:first-child{
+    background-position: -1px 0px
+}
+.hoverbox a:nth-child(2),.hoverbox1 a:nth-child(2){
+    background-position: -53px 0px;
+}
+
+.hoverbox a:nth-child(3),.hoverbox1 a:nth-child(3){
+    background-position: -105px 0px;
+}
+
+
+.hoverbox a:first-child:hover{
+    background-position: -157px 0px;
+}
+.hoverbox a:nth-child(2):hover{
+    background-position: -209px 0px;
+}
+.hoverbox a:nth-child(3):hover{
+    background-position: -261px 0px;
+}
+.storemainwrapbox>ul>li>ul>li>div:hover .hoverbox{
+    display: flex;
 }
