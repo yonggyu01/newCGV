@@ -20,7 +20,7 @@ a,address{
 }
 /* 초기화  */
 .font_red{
-    color: orangered !important;
+    color :orangered !important;
 }
 .main{
     min-width: 1040px;
@@ -80,28 +80,32 @@ font-weight: bold;}
     margin-bottom: 20px;
     width: 100%;
    
-}.storemainwrapbox>ul{
+}
+.storemainwrapbox>ul{
     display: flex;
     flex-flow: row wrap;
     width: 980px;
 }
-
-.storemainwrapbox>ul ul{
+/* .storemainwrapbox>ul>li:first-child{
+    width: 100%;
+    margin-bottom: 70px;
+} */
+.storemainwrapbox>ul ul li>div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px; 
+    box-sizing: border-box;
+}
+.storemainwrapbox>ul>li:first-child ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    /* justify-content: space-around; */
-    gap : 50px
-}
-.storemainwrapbox>ul>li>ul>li>div{
-    width: 270px;
+    justify-content: space-between;
 }
 .storemainwrapbox h3{
     font-size: 1.2em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-bottom: 5px;
 }
 .storemainwrapbox>ul>li:first-child ul li a img{
     width: 270px;
@@ -112,23 +116,25 @@ font-weight: bold;}
     font-weight: bold;
 }
 
-
-.storemainwrapbox p:not(.packbold){
+.storemainwrapbox>ul ul li>div p:not(.packbold){
     color: #666;
+
     margin-bottom: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
-.packwrap{
+
+.giftcardwrap{
+    /* padding-left: 20px; */
     position: relative;
+    box-sizing: border-box;
 }
 .packhoverwrap{
+    width: 100%;
     position: relative;
 }
 
 
-.hoverbox1{
+
+.hoverbox{
     position: absolute;
     top:0;
     display: none;
@@ -139,14 +145,14 @@ font-weight: bold;}
     justify-content: space-evenly;
 
 }
-.hoverbox1 a{
+.hoverbox a{
     display: flex;
     align-items: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #0b0b0b93;
-    background-image: url(../images/bg_icon_setBtn.png);
+    background-image: url(images/bg_icon_setBtn.png);
     white-space: wrap;
     font-size: 17px;    
     color : white;
@@ -168,15 +174,15 @@ font-weight: bold;}
 }
 
 
-.hoverbox1 a:first-child:hover{
+.hoverbox a:first-child:hover{
     background-position: -157px 0px;
 }
-.hoverbox1 a:nth-child(2):hover{
+.hoverbox a:nth-child(2):hover{
     background-position: -209px 0px;
 }
-.hoverbox1 a:nth-child(3):hover{
+.hoverbox a:nth-child(3):hover{
     background-position: -261px 0px;
 }
-.storemainwrapbox>ul ul>li>div:hover .hoverbox1{
+.storemainwrapbox>ul>li>ul>li>div:hover .hoverbox{
     display: flex;
 }

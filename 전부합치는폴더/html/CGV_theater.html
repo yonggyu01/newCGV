@@ -4,58 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGV</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style_theater.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style_theater.css">
 </head>
 <body>
     <div id="cgvWrap">
         <div class="fixedBtn">
-            <a href="http://www.cgv.co.kr/ticket/" class="btn_ticket">예매하기</a>
-            <a href="" class="btn_gotoTop"><img src="img/gotoTop.png" alt=""></a>
+            <a href="" class="btn_ticket">예매하기</a>
+            <a href="" class="btn_gotoTop"><img src="../img/gotoTop.png" alt=""></a>
         </div>    
 
         <div class="fixedNav">
             <div class="fixedNav_wrap">
-                <h2><a href="https://www.cgv.co.kr/"><img src="img/logoWhite.png" alt=""></a></h2>
+                <h2><a href=""><img src="../img/logoWhite.png" alt=""></a></h2>
                 <ul class="nav_menu">
                     <li>
-                        <a href="">영화</a>
+                        <a href="../html/CGV_arthouse.html">영화</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="#none">영화</a></dt>
-                            <dd><a href="#none">무비차트</a></dd>
-                            <dd><a href="#none">아트하우스</a></dd>
-                            <dd><a href="#none">ICECON</a></dd>
+                            <dt><a href="../html/CGV_arthouse.html">영화</a></dt>
+                            <dd><a href="">무비차트</a></dd>
+                            <dd><a href="../html/CGV_arthouse.html">아트하우스</a></dd>
+                            <dd><a href="">ICECON</a></dd>
                         </dl>
                     </li>
                     <li>
-                        <a href="">극장</a>
+                        <a href="../html/CGV_theater.html">극장</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="#none">극장</a></dt>
-                            <dd><a href="#none">CGV 극장</a></dd>
-                            <dd><a href="#none">특별관</a></dd>
+                            <dt><a href="../html/CGV_theater.html">극장</a></dt>
+                            <dd><a href="">CGV 극장</a></dd>
+                            <dd><a href="">특별관</a></dd>
                         </dl>
                     </li>
                     <li>
                         <a href="">예매</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="#none">빠른예매</a></dt>
-                            <dd><a href="#none">상영스케줄</a></dd>
-                            <dd><a href="#none">English Ticketing</a></dd>
-                            <dd><a href="#none">English Schedule</a></dd>
+                            <dt><a href="">빠른예매</a></dt>
+                            <dd><a href="">상영스케줄</a></dd>
+                            <dd><a href="">English Ticketing</a></dd>
+                            <dd><a href="">English Schedule</a></dd>
                         </dl>
                     </li>
                     <li>
-                        <a href="">스토어</a>
+                        <a href="../html/CGV_store.html">스토어</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="">패키지</a></dt>
-                            <dd><a href="">영화관람권</a></dd>
-                            <dd><a href="">기프트카드</a></dd>
-                            <dd><a href="">콤보</a></dd>
-                            <dd><a href="">팝콘</a></dd>
-                            <dd><a href="">음료</a></dd>
-                            <dd><a href="">스낵</a></dd>
-                            <dd><a href="">플레이존</a></dd>
-                            <dd><a href="">씨네샵</a></dd>
+                            <dt><a href="../html/CGV_store_pack.html">패키지</a></dt>
+                            <dd><a href="../html/CGV_store_movieticket.html">영화관람권</a></dd>
+                            <dd><a href="../html/CGV_store_gift.html">기프트카드</a></dd>
+                            <dd><a href="../html/CGV_store_combo.html">콤보</a></dd>
+                            <dd><a href="../html/CGV_store_pop.html">팝콘</a></dd>
+                            <dd><a href="../html/CGV_store_snack.html">스낵</a></dd>
                         </dl>
                     </li>
                     <li>
@@ -71,9 +68,9 @@
                         </dl>
                     </li>
                     <li>
-                        <a href="">혜택</a>
+                        <a href="../html/CGV_sale.html">혜택</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="">혜택</a></dt>
+                            <dt><a href="../html/CGV_sale.html">혜택</a></dt>
                             <dd><a href="">CGV 할인정보</a></dd>
                             <dd><a href="">CLUB 서비스</a></dd>
                             <dd><a href="">VIP 라운지</a></dd>
@@ -82,10 +79,16 @@
                 </ul>
 
                 <div class="search_wrap">
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <button class="fixedbtn_search">검색</button>
+                    <form action="" name="searchtxt" id="searchtxt">
+                        <fieldset>
+                            <legend class = 'xx'> 검색창</legend>
+                            <label for="text_search" class="xx">입력창</label> 
+                            
+                            <input type="text" id="text_search">
+                            
+                            <button class="fixedbtn_search">검색</button>
+                        </fieldset>
+                 </form>
                 </div>
             </div>
         </div>  
@@ -93,50 +96,56 @@
         <header>
             <div class="adTop">
                 <div class="adTop_wrap">
-                    <img src="img/sub/theater/adtop_banner.jpg" alt="">
+                    <img src="../img/adtop_banner.jpg" alt="">
+                    <a href="#none">
+                        <img src="../img/btn_ad_close.png" alt="" class="btn_close">
+                    </a>
                 </div>
             </div>
 
             <div class="headerTop">
                 <h1 class="logo">
-                    <a href="https://www.cgv.co.kr/">
-                        <img src="img/logoRed.png" alt="">
+                    <a href="../CGV.html">
+                        <img src="../img/logoRed.png" alt="">
                     </a>
                     <span class="cultureplex">CULTUREPLEX</span>
                 </h1>
                 
                 <div class="member">
                     <div class="ad_partner">
-                        <a href=""><img src="img/top_small_banner.png" alt=""></a>
+                        <a href="#none"><img src="../img/top_small_banner.png" alt=""></a>
                     </div>
                     <ul class=login_menu>
-                        <li><a href=""><img src="img/loginPassword.png" alt="">로그인</a></li>
-                        <li><a href=""><img src="img/loginJoin.png" alt="">회원가입</a></li>
-                        <li><a href=""><img src="img/loginMember.png" alt="">MY CGV</a></li>
-                        <li><a href=""><img src="img/loginCustomer.png" alt="">고객센터</a></li>
+                        <li><a href=""><img src="../img/loginPassword.png" alt="">로그인</a></li>
+                        <li><a href=""><img src="../img/loginJoin.png" alt="">회원가입</a></li>
+                        <li><a href=""><img src="../img/loginMember.png" alt="">MY CGV</a></li>
+                        <li><a href=""><img src="../img/loginCustomer.png" alt="">고객센터</a></li>
                     </ul>
                 </div>
             </div>
 
             <nav>
                 <div class="nav_wrap">
+                    <div class="nav_bg">
+                        
+                    </div>
                     <ul class="nav_menu">
                         <li>
-                            <a href="">영화</a>
+                            <a href="../html/CGV_arthouse.html">영화</a>
                             <dl class="sub_menu"> 
-                                <dt><a href="">영화</a></dt>
+                                <dt><a href="../html/CGV_arthouse.html">영화</a></dt>
                                 <dd><a href="">무비차트</a></dd>
-                                <dd><a href="">아트하우스</a></dd>
+                                <dd><a href="../html/CGV_arthouse.html">아트하우스</a></dd>
                                 <dd><a href="">ICECON</a></dd>
                             </dl>
                         </li>
                         <li>
-                            <a href="">극장</a>
+                            <a href="../html/CGV_theater.html">극장</a>
                             <dl class="sub_menu"> 
-                                <dt><a href="">극장</a></dt>
-                                <dd><a href="">CGV 극장</a></dd>
-                                <dd><a href="">특별관</a></dd>
-                            </dl>
+                                <dt><a href="../html/CGV_theater.html">극장</a></dt>
+                                <dd><a href="../html/CGV_theater.html">CGV 극장</a></dd>
+                                <dd><a href="../html/CGV_specialHall.html">특별관</a></dd>
+                            </dl> 
                         </li>
                         <li>
                             <a href=""><strong>예매</strong></a>
@@ -146,21 +155,17 @@
                                 <dd><a href="">English Ticketing</a></dd>
                                 <dd><a href="">English Schedule</a></dd>
                             </dl>
-                        </li>
-                        <li>
-                            <a href="">스토어</a>
-                            <dl class="sub_menu"> 
-                                <dt><a href="">패키지</a></dt>
-                                <dd><a href="">영화관람권</a></dd>
-                                <dd><a href="">기프트카드</a></dd>
-                                <dd><a href="">콤보</a></dd>
-                                <dd><a href="">팝콘</a></dd>
-                                <dd><a href="">음료</a></dd>
-                                <dd><a href="">스낵</a></dd>
-                                <dd><a href="">플레이존</a></dd>
-                                <dd><a href="">씨네샵</a></dd>
-                            </dl>
-                        </li>
+                            <li>
+                                <a href="../html/CGV_store.html">스토어</a>
+                                <dl class="sub_menu"> 
+                                    <dt><a href="../html/CGV_store_pack.html">패키지</a></dt>
+                                    <dd><a href="../html/CGV_store_movieticket.html">영화관람권</a></dd>
+                                    <dd><a href="../html/CGV_store_gift.html">기프트카드</a></dd>
+                                    <dd><a href="../html/CGV_store_combo.html">콤보</a></dd>
+                                    <dd><a href="../html/CGV_store_pop.html">팝콘</a></dd>
+                                    <dd><a href="../html/CGV_store_snack.html">스낵</a></dd>
+                                </dl>
+                            </li>
                         <li>
                             <a href="">이벤트</a>
                             <dl class="sub_menu"> 
@@ -174,9 +179,9 @@
                             </dl>
                         </li>
                         <li>
-                            <a href="">혜택</a>
-                            <dl class="sub_menu"> 
-                                <dt><a href="">혜택</a></dt>
+                            <a href="../html/CGV_sale.html">혜택</a>
+                            <dl class="sub_menu notthisone"> 
+                                <dt><a href="../html/CGV_sale.html">혜택</a></dt>
                                 <dd><a href="">CGV 할인정보</a></dd>
                                 <dd><a href="">CLUB 서비스</a></dd>
                                 <dd><a href="">VIP 라운지</a></dd>
@@ -185,10 +190,16 @@
                     </ul>
 
                     <div class="search_wrap">
-                        <label for="">
-                            <input type="text">
-                        </label>
-                        <button class="btn_search">검색</button>
+                        <form action="" name="searchtxt" id="searchtxt">
+                            <fieldset>
+                                <legend class = 'xx'> 검색창</legend>
+                                <label for="text_search" class="xx">입력창</label> 
+                                
+                                <input type="text" id="text_search">
+                                
+                                <button class="fixedbtn_search">검색</button>
+                            </fieldset>
+                     </form>
                     </div>
                 </div>
             </nav>  
@@ -482,21 +493,21 @@
             </section>
 
             <section class="theater">
-                <h3 class="tit"><img src="img/sub/theater/h3_theater.gif" alt="THEATER"></h3>
+                <h3 class="tit"><img src="../img/sub/theater/h3_theater.gif" alt="THEATER"></h3>
                
                 <div class="theater_sect">
 
                     <div class="theater_tit">
                         <h4>CGV강남</h4>
                         <span class="tab_inquiry">
-                            <a href="http://www.cgv.co.kr/support/lease/default.aspx">
+                            <a href="">
                                  단체/대관문의
                             </a>
                         </span>
                     </div>
                     
                     <div class="theater_img">
-                        <img src="img/sub/theater/CGVgangnam.jpg" alt="">
+                        <img src="../img/sub/theater/CGVgangnam.jpg" alt="">
                         <div class="theater_txt">
                             <div class="theater_info">
                                 서울특별시 강남구 역삼동 814-6 스타플렉스<br>
@@ -507,12 +518,12 @@
                                     <em>6관 / 874석</em>
                                 </div>  
                             </div>  
-                            <a href="http://www.cgv.co.kr/theaters/special/defaultDetailNew.aspx?regioncode=SCX&submenu="
+                            <a href=""
                                     class="screentype">
                                 스크린타입
                             </a>
                             <div class="notice">공지사항
-                                <a href="http://www.cgv.co.kr/support/news/Default.aspx?type=2" class="link_more"></a>
+                                <a href="" class="link_more"></a>
                             </div>
                         </div>
                     </div>
@@ -525,8 +536,8 @@
             </div>
 
             <ul class="tab_menu">
-                <li><a href=""><img src="img/sub/theater/ico_finger.png" alt="">  상영시간표</a></li>
-                <li><a href="http://www.cgv.co.kr/theaters/?page=location&theaterCode=0056#menu"> 위치/주차안내</a></li>
+                <li><a href=""><img src="../img/sub/theater/ico_finger.png" alt="">  상영시간표</a></li>
+                <li><a href=""> 위치/주차안내</a></li>
             </ul>
 
             <section class="schedule">
@@ -620,19 +631,19 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th><img src="img/sub/theater/icon_all.svg" alt="">전체 관람가</th>
+                                            <th><img src="../img/sub/theater/icon_all.svg" alt="">전체 관람가</th>
                                             <td>모든 연령의 고객님께서 관람하실 수 있습니다.</td>
                                         </tr>
                                         <tr>
-                                            <th><img src="img/sub/theater/icon_12.svg" alt="">12세 관람가</th>
+                                            <th><img src="../img/sub/theater/icon_12.svg" alt="">12세 관람가</th>
                                             <td>만 12세 미만의 고객님은 보호자를 동반하셔야 관람하실 수 있습니다.</td>
                                         </tr>
                                         <tr>
-                                            <th><img src="img/sub/theater/icon_15.svg" alt="">15세 관람가</th>
+                                            <th><img src="../img/sub/theater/icon_15.svg" alt="">15세 관람가</th>
                                             <td>만 15세 미만의 고객님은 보호자를 동반하셔야 관람하실 수 있습니다.</td>
                                         </tr>
                                         <tr>
-                                            <th><img src="img/sub/theater/icon_18.svg" alt="">청소년관람불가</th>
+                                            <th><img src="../img/sub/theater/icon_18.svg" alt="">청소년관람불가</th>
                                             <td>
                                                 만 18세 미만의 고객님은 보호자를 동반하셔도 관람하실 수 없습니다.<br> 
                                                 - 입장시 신분증을 꼭 지참하시기 바랍니다.<br>
@@ -640,7 +651,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><img src="img/sub/theater/icon_none.svg" alt="">미정</th>
+                                            <th><img src="../img/sub/theater/icon_none.svg" alt="">미정</th>
                                             <td>등급 미정 영화입니다.</td>
                                         </tr>
                                     </tbody>
@@ -649,7 +660,7 @@
                         </div>
 
                         <ul class="desc">
-                            <li class="price"><a href="http://www.cgv.co.kr/theaters/theaterPrice.aspx?tc=0056" >관람가격 안내</a></li>
+                            <li class="price"><a href="" >관람가격 안내</a></li>
                             <li class="grade"><a href="#none">관람등급 안내</a></li>
                         </ul>
                     </div>
@@ -672,7 +683,7 @@
                             <div class="map_area">
                                 <p class="screen">SCREEN</p>
                                 <div class="seat">
-                                    <img src="img/sub/theater/seat.PNG" alt="">
+                                    <img src="../img/sub/theater/seat.PNG" alt="">
                                 </div>
                             </div>
                                 <p class="theater_time">6회 24:00~26:31</p>
@@ -682,7 +693,7 @@
                     <ul class="info">
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_12.png" alt="" class="movieAge">
+                                <img src="../img/age_12.png" alt="" class="movieAge">
                                 <div class="movieName">
                                     <a href="#none">프레디의 피자가게</a>
                                     <span class="onair">상영중</span>
@@ -721,7 +732,7 @@
                         </li>
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_15.png" alt="" class="movieAge">
+                                <img src="../img/age_15.png" alt="" class="movieAge">
                                 <div class="movieName">
                                     <a href="#none">헝거게임-노래하는 새와 뱀의 발라드</a>
                                     <span class="onair">상영중</span>
@@ -760,7 +771,7 @@
                         </li>
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_12.png" alt="" class="movieAge">
+                                <img src="../img/age_12.png" alt="" class="movieAge">
                                 <div class="movieName">
                                     <a href="">더 마블스</a>
                                     <span class="onair">상영중</span>
@@ -786,7 +797,7 @@
                         </li>
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_12.png" alt="" class="movieAge">
+                                <img src="../img/age_12.png" alt="" class="movieAge">
                                 <div class="movieName">
                                     <a href="">그대들은 어떻게 살 것인가</a>
                                     <span class="onair">상영중</span>
@@ -812,7 +823,7 @@
                         </li>
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_12.png" alt="" class="movieAge">
+                                <img src="../img/age_12.png" alt="" class="movieAge">
                                 <div class="movieName">
 
                                     <a href="">탑건-매버릭</a>
@@ -847,7 +858,7 @@
                         </li>
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_12.png" alt="" class="movieAge">
+                                <img src="../img/age_12.png" alt="" class="movieAge">
                                 <div class="movieName">
 
                                     <a href="">2023 월드챔피언십 결승</a>
@@ -876,7 +887,7 @@
                         </li>
                         <li>
                             <div class="info_movie">
-                                <img src="img/age_15.png" alt="" class="movieAge">
+                                <img src="../img/age_15.png" alt="" class="movieAge">
                                 <div class="movieName">
 
                                     <a href="">다크나이트</a>
@@ -921,11 +932,11 @@
                 </div>
 
                 <div class="adbox">
-                    <a href="http://www.cgv.co.kr/movies/detail-view/?midx=87553" target="_blank">
-                        <img src="img/sub/theater/ad_160x300.jpg" alt=""> 
+                    <a href="" target="_blank">
+                        <img src="../img/sub/theater/ad_160x300.jpg" alt=""> 
                     </a>
-                    <a href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=37518&menu=006" target="_blank">
-                        <img src="img/sub/theater/ad2_160x300.jpg" alt="">
+                    <a href="" target="_blank">
+                        <img src="../img/sub/theater/ad2_160x300.jpg" alt="">
                     </a>
                 </div>
             </section>
@@ -941,25 +952,25 @@
 
         <footer>
             <div class="footer_ad">
-                <a href="http://ad.cgv.co.kr/click/CGV/CGV_201401/main@Bottom?ads_id%3d50402%26creative_id%3d74571%26click_id%3d95303%26content_series%3d%26event%3d" target="_blank">
-                    <img src="img/980x240.png" alt="">
+                <a href="#none" target="_blank">
+                    <img src="../img/980x240.png" alt="">
                 </a>
             </div>
             <div class="footer_wrap">
                 <section class="policy">
                     <ul class="policy_list">
-                        <li><a href="http://corp.cgv.co.kr/" target="_blank">회사소개</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/sustainabilityStrategy/strategy.aspx" target="_blank">지속가능경영</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/ir/financial/financial_list.aspx" target="_blank">IR</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/recruit/step/default.aspx" target="_blank">채용정보</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/advertize/ad_Default.aspx" target="_blank">광고/제휴/출점문의</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/service.aspx" target="_blank">이용약관</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/organized.aspx" target="_blank">편성기준</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/privacy.aspx" target="_blank"><strong>개인정보처리방침</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/disclaimer.aspx" target="_blank">법적고지</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/emreject.aspx" target="_blank">이메일주소무단수집거부</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/ethicalManagement/ceoMessage.aspx" target="_blank">윤리경영</a></li>
-                        <li><a href="http://www.cgv.co.kr/company/cyberAudit.aspx" target="_blank">사이버감사실</a></li>
+                        <li><a href="#none" target="_blank">회사소개</a></li>
+                        <li><a href="#none" target="_blank">지속가능경영</a></li>
+                        <li><a href="#none" target="_blank">IR</a></li>
+                        <li><a href="#none" target="_blank">채용정보</a></li>
+                        <li><a href="#none" target="_blank">광고/제휴/출점문의</a></li>
+                        <li><a href="#none" target="_blank">이용약관</a></li>
+                        <li><a href="#none" target="_blank">편성기준</a></li>
+                        <li><a href="#none" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#none" target="_blank">법적고지</a></li>
+                        <li><a href="#none" target="_blank">이메일주소무단수집거부</a></li>
+                        <li><a href="#none" target="_blank">윤리경영</a></li>
+                        <li><a href="#none" target="_blank">사이버감사실</a></li>
                     </ul>
                 </section>
 
@@ -988,7 +999,7 @@
                     <section class="familysite">
                         <div class="familysite_wrap">
                             <h3><a href="#none">계열사 바로가기</a></h3>
-                            <dl>
+                            <dl class="familysite_list">
                                 <dt>&nbsp;&nbsp;&nbsp;CJ그룹</dt>
                                     <dd>&nbsp;&nbsp;CJ주식회사</dd>
                                 <dt>&nbsp;&nbsp;&nbsp;식품 및 식당서비스</dt>
@@ -1016,8 +1027,6 @@
         </footer>
         
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="js/cgv_theater.js"></script>
+
 </body>
 </html>

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGV</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style_sale.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style_sale.css">
 </head>
 <body>
     <div id="cgvWrap">
         <div class="fixedBtn">
-            <a href="http://www.cgv.co.kr/ticket/" class="btn_ticket">예매하기</a>
-            <a href="" class="btn_gotoTop"><img src="img/gotoTop.png" alt=""></a>
+            <a href="" class="btn_ticket">예매하기</a>
+            <a href="" class="btn_gotoTop"><img src="../img/gotoTop.png" alt=""></a>
         </div>    
 
         <div class="fixedNav">
             <div class="fixedNav_wrap">
-                <h2><a href="https://www.cgv.co.kr/"><img src="img/logoWhite.png" alt=""></a></h2>
+                <h2><a href=""><img src="../img/logoWhite.png" alt=""></a></h2>
                 <ul class="nav_menu">
                     <li>
                         <a href="">영화</a>
@@ -45,17 +45,14 @@
                         </dl>
                     </li>
                     <li>
-                        <a href="">스토어</a>
+                        <a href="../html/CGV_store.html">스토어</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="">패키지</a></dt>
-                            <dd><a href="">영화관람권</a></dd>
-                            <dd><a href="">기프트카드</a></dd>
-                            <dd><a href="">콤보</a></dd>
-                            <dd><a href="">팝콘</a></dd>
-                            <dd><a href="">음료</a></dd>
-                            <dd><a href="">스낵</a></dd>
-                            <dd><a href="">플레이존</a></dd>
-                            <dd><a href="">씨네샵</a></dd>
+                            <dt><a href="../html/CGV_store_pack.html">패키지</a></dt>
+                            <dd><a href="../html/CGV_store_movieticket.html">영화관람권</a></dd>
+                            <dd><a href="../html/CGV_store_gift.html">기프트카드</a></dd>
+                            <dd><a href="../html/CGV_store_combo.html">콤보</a></dd>
+                            <dd><a href="../html/CGV_store_pop.html">팝콘</a></dd>
+                            <dd><a href="../html/CGV_store_snack.html">스낵</a></dd>
                         </dl>
                     </li>
                     <li>
@@ -82,10 +79,16 @@
                 </ul>
 
                 <div class="search_wrap">
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <button class="fixedbtn_search">검색</button>
+                    <form action="" name="searchtxt" id="searchtxt">
+                        <fieldset>
+                            <legend class = 'xx'> 검색창</legend>
+                            <label for="text_search" class="xx">입력창</label> 
+                            
+                            <input type="text" id="text_search">
+                            
+                            <button class="fixedbtn_search">검색</button>
+                        </fieldset>
+                 </form>
                 </div>
             </div>
         </div>  
@@ -93,33 +96,39 @@
         <header>
             <div class="adTop">
                 <div class="adTop_wrap">
-                    <img src="img/sub/sale/adtop_banner.jpg" alt="">
+                    <img src="../img/adtop_banner.jpg" alt="">
+                    <a href="#none">
+                        <img src="../img/btn_ad_close.png" alt="" class="btn_close">
+                    </a>
                 </div>
             </div>
 
             <div class="headerTop">
                 <h1 class="logo">
-                    <a href="https://www.cgv.co.kr/">
-                        <img src="img/logoRed.png" alt="">
+                    <a href="../CGV.html">
+                        <img src="../img/logoRed.png" alt="">
                     </a>
                     <span class="cultureplex">CULTUREPLEX</span>
                 </h1>
                 
                 <div class="member">
                     <div class="ad_partner">
-                        <a href=""><img src="img/top_small_banner.png" alt=""></a>
+                        <a href="#none"><img src="../img/top_small_banner.png" alt=""></a>
                     </div>
                     <ul class=login_menu>
-                        <li><a href=""><img src="img/loginPassword.png" alt="">로그인</a></li>
-                        <li><a href=""><img src="img/loginJoin.png" alt="">회원가입</a></li>
-                        <li><a href=""><img src="img/loginMember.png" alt="">MY CGV</a></li>
-                        <li><a href=""><img src="img/loginCustomer.png" alt="">고객센터</a></li>
+                        <li><a href=""><img src="../img/loginPassword.png" alt="">로그인</a></li>
+                        <li><a href=""><img src="../img/loginJoin.png" alt="">회원가입</a></li>
+                        <li><a href=""><img src="../img/loginMember.png" alt="">MY CGV</a></li>
+                        <li><a href=""><img src="../img/loginCustomer.png" alt="">고객센터</a></li>
                     </ul>
                 </div>
             </div>
 
             <nav>
                 <div class="nav_wrap">
+                    <div class="nav_bg">
+                        
+                    </div>
                     <ul class="nav_menu">
                         <li>
                             <a href="">영화</a>
@@ -136,7 +145,7 @@
                                 <dt><a href="">극장</a></dt>
                                 <dd><a href="">CGV 극장</a></dd>
                                 <dd><a href="">특별관</a></dd>
-                            </dl>
+                            </dl> 
                         </li>
                         <li>
                             <a href=""><strong>예매</strong></a>
@@ -146,21 +155,17 @@
                                 <dd><a href="">English Ticketing</a></dd>
                                 <dd><a href="">English Schedule</a></dd>
                             </dl>
-                        </li>
-                        <li>
-                            <a href="">스토어</a>
-                            <dl class="sub_menu"> 
-                                <dt><a href="">패키지</a></dt>
-                                <dd><a href="">영화관람권</a></dd>
-                                <dd><a href="">기프트카드</a></dd>
-                                <dd><a href="">콤보</a></dd>
-                                <dd><a href="">팝콘</a></dd>
-                                <dd><a href="">음료</a></dd>
-                                <dd><a href="">스낵</a></dd>
-                                <dd><a href="">플레이존</a></dd>
-                                <dd><a href="">씨네샵</a></dd>
-                            </dl>
-                        </li>
+                            <li>
+                                <a href="../html/CGV_store.html">스토어</a>
+                                <dl class="sub_menu"> 
+                                    <dt><a href="../html/CGV_store_pack.html">패키지</a></dt>
+                                    <dd><a href="../html/CGV_store_movieticket.html">영화관람권</a></dd>
+                                    <dd><a href="../html/CGV_store_gift.html">기프트카드</a></dd>
+                                    <dd><a href="../html/CGV_store_combo.html">콤보</a></dd>
+                                    <dd><a href="../html/CGV_store_pop.html">팝콘</a></dd>
+                                    <dd><a href="../html/CGV_store_snack.html">스낵</a></dd>
+                                </dl>
+                            </li>
                         <li>
                             <a href="">이벤트</a>
                             <dl class="sub_menu"> 
@@ -174,9 +179,9 @@
                             </dl>
                         </li>
                         <li>
-                            <a href="">혜택</a>
+                            <a href="../html/CGV_sale.html">혜택</a>
                             <dl class="sub_menu"> 
-                                <dt><a href="">혜택</a></dt>
+                                <dt><a href="../html/CGV_sale.html">혜택</a></dt>
                                 <dd><a href="">CGV 할인정보</a></dd>
                                 <dd><a href="">CLUB 서비스</a></dd>
                                 <dd><a href="">VIP 라운지</a></dd>
@@ -185,10 +190,16 @@
                     </ul>
 
                     <div class="search_wrap">
-                        <label for="">
-                            <input type="text">
-                        </label>
-                        <button class="btn_search">검색</button>
+                        <form action="" name="searchtxt" id="searchtxt">
+                            <fieldset>
+                                <legend class = 'xx'> 검색창</legend>
+                                <label for="text_search" class="xx">입력창</label> 
+                                
+                                <input type="text" id="text_search">
+                                
+                                <button class="fixedbtn_search">검색</button>
+                            </fieldset>
+                     </form>
                     </div>
                 </div>
             </nav>  
@@ -207,48 +218,48 @@
                 </div>
 
                 <div class="sale_info">
-                    <img src="img/sub/sale/main.jpg" alt="">
+                    <img src="../img/sub/sale/main.jpg" alt="">
 
                     <div class="slide_wrap">
                         <div class="slide">
                             <div class="slide_btn">
                                 <div class="btn slide_btn_prev">
-                                    <img src="img/sub/sale/prev.svg" alt="">
+                                    <img src="../img/sub/sale/prev.svg" alt="">
                                 </div>
                                 <div class="btn slide_btn_next">
-                                    <img src="img/sub/sale/next.svg" alt="">
+                                    <img src="../img/sub/sale/next.svg" alt="">
                                 </div>
                             </div>
 
                             <ul class="slide_list">
                                 <li>
                                     <a href="">
-                                        <img src="img/sub/sale/slide01.png" alt="">
+                                        <img src="../img/sub/sale/slide01.png" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="img/sub/sale/slide02.jpg" alt="">
+                                        <img src="../img/sub/sale/slide02.jpg" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="img/sub/sale/slide03.jpg" alt="">
+                                        <img src="../img/sub/sale/slide03.jpg" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="img/sub/sale/slide04.jpg" alt="">
+                                        <img src="../img/sub/sale/slide04.jpg" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="img/sub/sale/slide05.jpg" alt="">
+                                        <img src="../img/sub/sale/slide05.jpg" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="img/sub/sale/slide06.png" alt="">
+                                        <img src="../img/sub/sale/slide06.png" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -268,7 +279,7 @@
                         </div>
 
                         <div class="adbox"> 
-                            <img src="img/sub/sale/card01.png" alt="">
+                            <img src="../img/sub/sale/card01.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -290,7 +301,7 @@
                     <ul class="sale_box">
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/001.jpg" alt="">
+                                <img src="../img/sub/sale/001.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>(강원)삼성카드 고객대상 + 2D영화5천원+콤보할인!</strong>
                                     <p class="date">2023.11.01~2023.11.30</p>
@@ -299,7 +310,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/002.jpg" alt="">
+                                <img src="../img/sub/sale/002.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>해피포인트 회원이라면 상시 영화 할인!</strong>
                                     <p class="date">2023.06.12~2023.12.31</p>
@@ -308,7 +319,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/003.jpg" alt="">
+                                <img src="../img/sub/sale/003.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>우리카드 EVERY1DAY ! 매월 1일 1천원 이벤트</strong>
                                     <p class="date">2023.11.15~2023.12.01</p>
@@ -317,7 +328,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/004.jpg" alt="">
+                                <img src="../img/sub/sale/004.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>카카오페이 4천원할인</strong>
                                     <p class="date">2023.11.08~2023.11.30</p>
@@ -326,7 +337,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/005.jpg" alt="">
+                                <img src="../img/sub/sale/005.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>LGU+알뜰폰 CGV FREE 요금제 출시!</strong>
                                     <span class="date"></span>
@@ -335,7 +346,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/006.jpg" alt="">
+                                <img src="../img/sub/sale/006.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>네이버페이 결제시, 모두 영화할인!</strong>
                                     <span class="date">2023.11.03~2023.11.30</span>
@@ -344,7 +355,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/007.jpg" alt="">
+                                <img src="../img/sub/sale/007.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>트래블제로카드로 결제하고 영화관람권 받자!</strong>
                                     <span class="date">2023.11.01~2023.11.30</span>
@@ -353,7 +364,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/008.jpg" alt="">
+                                <img src="../img/sub/sale/008.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>삼성카드 결제시 2D 일반 영화 5천원 예매</strong>
                                     <span class="date">2023.11.01~2023.11.30</span>
@@ -362,7 +373,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="img/sub/sale/009.jpg" alt="">
+                                <img src="../img/sub/sale/009.jpg" alt="">
                                 <div class="sale_txt">
                                     <strong>LOCA LIKIT 롯데카드 프로모션</strong>
                                     <span class="date">2023.11.01~2023.11.30</span>
@@ -372,7 +383,7 @@
                     </ul>
                 </div>
 
-                <div class="sale_theater">
+                <!-- <div class="sale_theater">
                     <select name="" id="sel_region">
                         <option value="">서울</option>
                         <option value="">경기</option>
@@ -387,7 +398,7 @@
                     <select name="" id="sel_theater">
                         <option value="극장선택">극장선택</option>
                     </select>
-                    <button>조회하기</button>
+                    <button>조회하기</button> -->
                 </div>
             </section>
 
@@ -404,25 +415,25 @@
 
         <footer>
             <div class="footer_ad">
-                <a href="http://ad.cgv.co.kr/click/CGV/CGV_201401/main@Bottom?ads_id%3d50402%26creative_id%3d74571%26click_id%3d95303%26content_series%3d%26event%3d" target="_blank">
-                    <img src="img/980x240.png" alt="">
+                <a href="#none" target="_blank">
+                    <img src="../img/980x240.png" alt="">
                 </a>
             </div>
             <div class="footer_wrap">
                 <section class="policy">
                     <ul class="policy_list">
-                        <li><a href="http://corp.cgv.co.kr/" target="_blank">회사소개</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/sustainabilityStrategy/strategy.aspx" target="_blank">지속가능경영</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/ir/financial/financial_list.aspx" target="_blank">IR</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/recruit/step/default.aspx" target="_blank">채용정보</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/advertize/ad_Default.aspx" target="_blank">광고/제휴/출점문의</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/service.aspx" target="_blank">이용약관</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/organized.aspx" target="_blank">편성기준</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/privacy.aspx" target="_blank"><strong>개인정보처리방침</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/disclaimer.aspx" target="_blank">법적고지</a></li>
-                        <li><a href="http://www.cgv.co.kr/rules/emreject.aspx" target="_blank">이메일주소무단수집거부</a></li>
-                        <li><a href="http://corp.cgv.co.kr/company/ethicalManagement/ceoMessage.aspx" target="_blank">윤리경영</a></li>
-                        <li><a href="http://www.cgv.co.kr/company/cyberAudit.aspx" target="_blank">사이버감사실</a></li>
+                        <li><a href="#none" target="_blank">회사소개</a></li>
+                        <li><a href="#none" target="_blank">지속가능경영</a></li>
+                        <li><a href="#none" target="_blank">IR</a></li>
+                        <li><a href="#none" target="_blank">채용정보</a></li>
+                        <li><a href="#none" target="_blank">광고/제휴/출점문의</a></li>
+                        <li><a href="#none" target="_blank">이용약관</a></li>
+                        <li><a href="#none" target="_blank">편성기준</a></li>
+                        <li><a href="#none" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#none" target="_blank">법적고지</a></li>
+                        <li><a href="#none" target="_blank">이메일주소무단수집거부</a></li>
+                        <li><a href="#none" target="_blank">윤리경영</a></li>
+                        <li><a href="#none" target="_blank">사이버감사실</a></li>
                     </ul>
                 </section>
 
@@ -451,7 +462,7 @@
                     <section class="familysite">
                         <div class="familysite_wrap">
                             <h3><a href="#none">계열사 바로가기</a></h3>
-                            <dl>
+                            <dl class="familysite_list">
                                 <dt>&nbsp;&nbsp;&nbsp;CJ그룹</dt>
                                     <dd>&nbsp;&nbsp;CJ주식회사</dd>
                                 <dt>&nbsp;&nbsp;&nbsp;식품 및 식당서비스</dt>
@@ -479,8 +490,6 @@
         </footer>
         
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="js/cgv.js"></script>
+
 </body>
 </html>

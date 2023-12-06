@@ -290,7 +290,8 @@ nav{
 
 /*main */
 main{
-
+    width: 980px;
+    margin: 0 auto;
 }
 main section h2{
     font-weight: 700;
@@ -300,324 +301,189 @@ main section h2{
     margin-bottom:17px;
 }
 
-/*main -common-allView */
-.allView{
-    position: absolute;
-    top:60px;
-    right:0;    
-    width:60px;
-    padding: 4px 32px 4px 15px;
-    font-size: 14px;
+/*main -section-arthouse */
+.art_tit{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 15px 0;
+}
+.art_tit h3{
     color: #222;
-    line-height: 1.429em;
-    background: transparent url(../img/arrowR_8x13.png) calc(100% - 7px) center/8px 13px scroll no-repeat;
-    border: 1px solid #e2e2e2;
-    border-radius: 15px;
-    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 540;
+    font-size: 36px;
 }
-/*main -section-video */
-.video{
-    background: #000;
-}
-.video_wrap{
-    width: 980px;
-    height: 552px;
-    margin: 0 auto;
-    position: relative;
-}
-.video_wrap:before{
-    content: '';
-    width: 100%;
-    height: 551.7px;
-    position: absolute;
-    background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, 0.25) 75%, #000 100%);
-}
-video{
-    display: block;
-    width: 980px;
-    margin: 0 auto;
-}
-.videotit{
-    position: absolute;
-    top: 170px;
-    left:0px;
-    color: #fff;
-}
-    .video_tit{
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 1.450em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
-    }
-    .video_txt{
-        margin-top:20px;
-        font-weight:500;
-        font-size: 20px;
-        line-height: 1.450em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
-    }
-    .videoController{
-        display: flex;
-        margin-top:30px;
-    }
-        .btn_detail{
-            padding: 5px 30px 5px 18px;
-            font-size: 14px;
-            color: #343434;
-            line-height: 18px;
-            background: rgba(255, 255, 255, 0.8) url(../img/arrowR_8x13.png) calc(100% - 11px) center/8px 13px scroll no-repeat;
-            border-radius: 15px;
-        }
-        .btn_play{
-            display:inline-block;
-            background: url(../img/play_w.png) center/ 18px  18px  no-repeat;
-            width: 28px;
-            height: 28px;
-            border-radius:50%;
-            border: 1px solid #fff;
-            text-indent: -999em;
-            margin-left:12px;
-        }
-        .btn_Stop{
-            background: url(../img/pause.png) center/ 18px  18px  no-repeat;
-            width: 28px;
-            height: 28px;
-            border-radius:50%;
-            border: 1px solid #fff;
-            text-indent: -999em;
-            margin-left:12px;
-            display: none;
-        }
-        .btn_soundOn{
-            display:inline-block;
-            background: url(../img/soundOn.png) center/ 18px  18px  no-repeat;
-            width: 28px;
-            height: 28px;
-            border-radius:50%;
-            border: 1px solid #fff;
-            text-indent: -999em;
-            margin-left: 10px;
-        }
-        .btn_soundOff{
-            display:inline-block;
-            background: url(../img/soundOff.png) center/ 18px  18px  no-repeat;
-            width: 28px;
-            height: 28px;
-            border-radius:50%;
-            border: 1px solid #fff;
-            text-indent: -999em;
-            display: none;
-        }
-
-
-/*main -section-chart */
-.chart{
-    background:#f7f7f7;
-    padding: 60px 0 60px;
-}
-.chart_wrap{
-    position: relative;
-    width: 980px;
-    margin: 0 auto;
-}
-.chart_tit{
-    display: flex;
-}
-.chart_tit h2{
-    margin-right: 10px;
-}
-.chart_tit h2 ~ h2:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top:20px;
-    width: 1px;
-    height: 14px;
-    margin-top: -7px;
-    background-color: #d8d8d8;
-}
-.chart_tit h2:nth-child(2) a{
-    margin-left: 10px;
-    font-weight: 400;
-    font-size: 26px;
-    color: #666;
-    line-height: 1.423em;
-}
-.chart_tit .allView{
-    position: absolute;
-    top:5px;
-}
-.slide_btn{
-    position:relative;
-    z-index:1;
-}
-.slide_btn_prev{
-    position: absolute;
-    transform: translateY(200%);
-    left:-20px;
-    content: '';
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background:rgba(255, 255, 255, 0.8)  url('../img/arrowL.png')center/ 9px 13px no-repeat;
-    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
-    display: none;
-}
-.slide_btn_next{
-    position: absolute;
-    transform: translateY(215%);
-    right:-15px;
-    content: '';
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background:rgba(255, 255, 255, 0.8)  url('../img/arrowR.png')center/ 9px 13px  no-repeat;
-    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
-}
-.slide_wrap{
-    overflow: hidden;
-    width:1000px;
-    height:310px;
-    position: relative;
-}
-.slide_list{
-    position: absolute;
-    display: flex;
-    gap: 31px;
-    counter-reset:number;
-}
-.slide_list li{
-    width: 170px;
-    text-align: center;
-}
-.slide_list .img_wrap{
-    position: relative;
-}
-.slide_list .img_wrap:before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom:20px;
-    width:170px;
-    height:143px;
-    font-weight: 700;
-    border-radius: 10px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    z-index:1;
-}
-.slide_list .img_wrap:after{
-    content: counter(number);
-    counter-increment: number;
-    width:30px;
-    height:70px;
-    position: absolute;
-    left:7px;
-    bottom:-3px;
-    font-weight:540;
-    font-size: 50px;
-    font-style: italic;
-    color: #fff;
-    line-height: 1em;
-    z-index:2;
-}
-.slide_list .img_wrap img{
-   width: 100%;
-}
-    .movieAge{
-        position: absolute;
-        right: 6px;
-        top: 7px;
-        width: 20px;
-        height: 20px;
-    }
-    .movieDay{
-        position:absolute;
-    }
-    .screenType{
-        position:absolute;
-        right: 6px;
-        bottom:27px;
-        z-index:2;
-    }
-
-/* 마우스 오버 시 상세 예매 버튼 나타나기*/    
-.detailView{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 170px;
-    height: 242px;
-    background:rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    z-index: 1;
-}
-.detailView a{
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-    height: 34px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 13px;
-    background: #fff;
-    line-height: 34px;
-    color:#666;
-}
-.detailView a.ticket{
-    color:#ffffff;
-    background: #ff4a57;
-    margin-top:5px;
-}
-.detailView {
-    display: none;
-}
-li:hover .detailView {
-    display:flex;
-    box-shadow: 10px 10px 12px 2px #bebebe;
-}
-li:hover .img_wrap:after {
-    text-indent: -999em;
-}
-.slide_list .movieThumbnail{
-    width:170px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-.slide_list .movieName{
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    overflow: hidden;
-    color: #222;
-    line-height: 1.167em;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-bottom: 9px;
-}
-.slide_list .egg{
-    width: 16px;
-    height: 16px;
+.question{
     vertical-align: top;
 }
-.slide_list span{
+.arthouse_list{
+    display: flex;
+}
+.arthouse_list li{
+    padding-left: 13px;
+    font-weight: 600;
     font-size: 14px;
-    color: #444;
-    line-height: 1.214em;
+    color:#666;
+    margin-top: 20px;
 }
-.slide_list span.rate:before {
-    content: '';
+  .arthouse_list li.on{
+    color: #fb4357;
+   }
+   .arthouse_list li.on{
+    background: url('../img/sub/arthouse/ico_arrow07.png') no-repeat 0 3px; 
+   } 
+
+
+.tit{
+    background: url('../img/sub/arthouse/bg_h3_line.jpg') repeat-x 0 50%;
+    height: 41px;
+    margin: 30px 0 15px;
+    line-height: 41px;
+    text-align: center;
+}
+.sale{
+
+}
+    .sale_tit{
+        color: #222;
+        font-weight: 500;
+        font-size: 36px;
+        text-align: left;
+        vertical-align: middle;
+        display: flex;
+
+    }
+    .sale_list{
+        display: flex;
+        padding-left: 13px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .sale_info{
+        display: flex;
+        justify-content: space-between;
+    } 
+
+/*main -section-now showing */
+.now_showing{
+    position: relative;
+    margin-bottom: 50px;
+}
+.btn_more{
+    position: absolute;
+    right:0;
+    top:35px;
+}
+.show_tit{
+    background: url(../img/sub/arthouse/h3_now-showing.gif) center no-repeat;
+    text-indent: -999em;
+    height: 39px;
+}
+.show_sect{
+    display: flex;
+    justify-content: space-between;
+    margin-top:24px;
+}
+.show_sect li{
+    width: 197px;
+}
+.show_sect li img{
+   width: 100%;
+   margin-bottom:10px;
+}
+.movieName{
+    font-weight: 600;
+    font-size: 15px;
+}
+.rate{
+    display: block;
+    color: #333333;
+    font-size: 13px;
+}
+.egg{
     display: inline-block;
-    width: 1px;
-    height: 10px;
-    margin-right:5px;
-    background: #e9e9e9;
+    width: 20px;
+    height: 26px;
+    background: url("../img/sub/arthouse/sprite_egg.png")center no-repeat;
 }
+    .default{
+        background-position: 0px -47px;
+    }
+    .great{
+        background-position: -41px -47px;
+    }
+    .good{
+        background-position: -22px -47px;
+    }
 
+.date{
+    display: block;
+    margin-top:6px;
+    height:12px;
+    color: #666666;
+    font-weight: 600;
+    font-size:12px;
+}
+.reservation{
+    display: inline-block;
+    width: 194px;
+    height: 26px;
+    background:url(../img/sub/arthouse/sprite_preegg.png) 0 -110px no-repeat;
+    text-indent: -999em;
+    margin-top: 10px;
+}
+.show_sect .img_wrap{
+    position: relative;
+}
+.show_sect .img_wrap img{
+    width: 100%;
+ }
+     .movieAge{
+         position: absolute;
+         left: 6px;
+         top: 7px;
+         width: 20px;
+         height: 20px;
+     }
 
+.trailer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.youtube{
+    height: 376px;
+    position: relative;
+    background: #000;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+    .youtube img{
+
+    }
+    .youtube .btn_play{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 66px;
+        height: 66px;
+        background: url(../img/sub/arthouse/sprite_icon.png)-121px -21px no-repeat;
+    }
+
+/*main -section-talk program */
+.talk_sect{
+    width: 726px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top:30px;
+}
+.talk_sect li{
+    width: 197px;
+}
+.trailer_popup{
+    display: none;
+}
 
 /*main -section-event */
 .event{
@@ -675,6 +541,7 @@ li:hover .img_wrap:after {
     border-radius: 50%;
     background: url(../img/stop.png) center center / 8px 12px no-repeat;
 }
+/* 움직이는 효과 */
 
 
 
@@ -691,14 +558,11 @@ li:hover .img_wrap:after {
     display: flex;
     justify-content: space-between;
 }
-.specialHall_img{
+#specialHall_img{
     position: relative;
     width: 500px;
     height: 260px;
     overflow: hidden;
-}
-.specialHall_img img{
-    width: 100%;
 }
 .specialHall_list{
     width: 440px;
@@ -1031,18 +895,7 @@ address{
     width: 100%;
     background: url(../img/arrow_D.png) 146px no-repeat;
 }
-.familysite_wrap dt{
-    font-weight:600;
-    line-height:2em;
-}
-.familysite_wrap dd{
-    padding-left: 15px;
-}
-.familysite_wrap dd:hover{
-    background:#666;
-    color:#fff;
-}
-.familysite_list{
+.familysite_wrap dl{
     position: absolute;
     bottom: 65px;
     width: 172px;
@@ -1054,8 +907,16 @@ address{
     box-shadow: 5px 0px 20px 0px #e4e4e4;
     display: none;
 }
-.on{
-    display: block;
+.familysite_wrap dt{
+    font-weight:600;
+    line-height:2em;
+}
+.familysite_wrap dd{
+    padding-left: 15px;
+}
+.familysite_wrap dd:hover{
+    background:#666;
+    color:#fff;
 }
 .go{
     text-align: center;

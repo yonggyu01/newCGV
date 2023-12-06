@@ -221,7 +221,7 @@ font-weight: bold;}
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    background-image: url(../images/bg_cartBtn.png);
+    background-image: url(images/bg_cartBtn.png);
     background-repeat: no-repeat;
     text-indent: -9999px;
     background-position: center;
@@ -262,7 +262,6 @@ font-weight: bold;}
 .notice dt{
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 .notice dd{
     margin-bottom: 50px;
@@ -326,7 +325,7 @@ font-weight: bold;}
         height: 50px;
         border-radius: 50%;
         background-color: #0b0b0b93;
-        background-image: url(../images/bg_icon_setBtn.png);
+        background-image: url(images/bg_icon_setBtn.png);
         white-space: wrap;
         font-size: 17px;    
         color : white;
