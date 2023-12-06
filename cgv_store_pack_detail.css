@@ -282,7 +282,8 @@ font-weight: bold;}
     */
 
     /* 슬라이드 */
-    .prevslidechart{padding-bottom: 30px;}
+    .prevslidechart{padding-bottom: 30px;
+    position: relative;}
     .prevslidechart>h3{
         font-size: 1.5em;
         padding-bottom: 20px;
@@ -344,7 +345,51 @@ font-weight: bold;}
     .hoverbox a:nth-child(3),.hoverbox1 a:nth-child(3){
         background-position: -105px 0px;
     }
+    .leftrightbtn{
+        display: flex;
+        position: absolute;
+        top:40%;
+        width: 100%;
+    }
+    #leftb{
+        overflow: hidden;
+        line-height: 0;
+    }
+    #leftb::after{content: '<' ;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left:-5%;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    color: #666;
+
+    line-height: 45px;
+        top:0;
+}
+    #rightb{
+        overflow: hidden;
+        line-height: 0;
     
+    }
+    #rightb::after{content: '>' ;
+        position: absolute;
+        right:0%;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+        color: #666;
+     
+     
+            top:0;
+            line-height: 45px;
+    }
+.packhoverwrap{
+    margin-bottom: 20px;
+}
     
     .hoverbox1 a:first-child:hover{
         background-position: -157px 0px;
@@ -358,4 +403,8 @@ font-weight: bold;}
     .storemainwrapbox>ul li>div:hover .hoverbox1{
         display: flex;
     }
-    
+    .storemainwrapbox h3,.storemainwrapbox p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
