@@ -485,6 +485,8 @@ video{
     display: flex;
     gap: 31px;
     counter-reset:number;
+    transition: all 0.5s;
+    left:0;
 }
 .slide_list li{
     width: 170px;
