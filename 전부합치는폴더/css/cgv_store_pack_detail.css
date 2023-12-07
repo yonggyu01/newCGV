@@ -299,6 +299,8 @@ font-weight: bold;}
     .storemainwrapbox ul{
         display: flex;
         width: 1800px;
+        transition: all 0.5s;
+        transform: translateX(0);
     }
     .storemainwrapbox li{
         width: 270px;

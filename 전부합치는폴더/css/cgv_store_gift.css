@@ -134,7 +134,7 @@ font-weight: bold;}
 
 
 
-.hoverbox{
+.hoverbox3{
     position: absolute;
     top:0;
     display: none;
@@ -145,7 +145,7 @@ font-weight: bold;}
     justify-content: space-evenly;
 
 }
-.hoverbox a{
+.hoverbox3 a{
     display: flex;
     align-items: center;
     width: 50px;
@@ -162,27 +162,27 @@ font-weight: bold;}
     background-repeat: no-repeat
     ;
 }
-.hoverbox a:first-child,.hoverbox1 a:first-child{
+.hoverbox3 a:first-child,.hoverbox1 a:first-child{
     background-position: -1px 0px
 }
-.hoverbox a:nth-child(2),.hoverbox1 a:nth-child(2){
+.hoverbox3 a:nth-child(2),.hoverbox1 a:nth-child(2){
     background-position: -53px 0px;
 }
 
-.hoverbox a:nth-child(3),.hoverbox1 a:nth-child(3){
+.hoverbox3 a:nth-child(3),.hoverbox1 a:nth-child(3){
     background-position: -105px 0px;
 }
 
 
-.hoverbox a:first-child:hover{
+.hoverbox3 a:first-child:hover{
     background-position: -157px 0px;
 }
-.hoverbox a:nth-child(2):hover{
+.hoverbox3 a:nth-child(2):hover{
     background-position: -209px 0px;
 }
-.hoverbox a:nth-child(3):hover{
+.hoverbox3 a:nth-child(3):hover{
     background-position: -261px 0px;
 }
-.storemainwrapbox>ul>li>ul>li>div:hover .hoverbox{
+.storemainwrapbox>ul>li>ul>li>div:hover .hoverbox3{
     display: flex;
 }
