@@ -11,6 +11,7 @@ window.onload =function(){
         eventslide =document.querySelector('.event_list'),//
         eventli =document.querySelector('.event_list li').getBoundingClientRect().width,//      
         idchecker = e.target.id || e.target.classList.value;
+        // console.log(idchecker)
         switch (idchecker){
             case 'btn_close' :
                 document.querySelector('.adTop').style.display = 'none'

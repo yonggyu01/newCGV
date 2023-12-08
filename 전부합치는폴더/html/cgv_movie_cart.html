@@ -3,371 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cgv_moviechart.css">
     <title>movie_chart</title>
 </head>
 <body>
     <main>
     <section class="chart">
         <h1>무비차트<span><p>무비차트</p><p>상영예정작</p></span></h1>
-        <div class="chart_wrap">
-            <div class="chart_tit">
-                <h2><a href="">무비차트</a></h2>
-                <h2><a href="">상영예정작</a></h2>
-                <div class="allView">
-                    <a href="">전체보기</a>
-                </div>
-            </div>
-            <div class="slide_btn">
-                <div class="slide_btn_prev"></div>
-                <div class="slide_btn_next"></div>
-            </div>
 
-            <div class="slide_wrap">
-                <ul class="slide_list">
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
+        <form action="" method="get" name="check" id="check">
+            <fieldset id="checkbox1">
+                <legend class="xx"> 상영작 체크버튼 </legend>
+                <input type="checkbox" name="checkb" id="checkb">
+                <label for="checkb">현재 상영작만 보기</label>
+            </fieldset>
+            <fieldset id = 'sortbox'>
+                <select name="sort" id="sortitem">
+                    <option value="0">예매율순</option>
+                    <option value="1">평점순</option>
+                    <option value="2">관람객순</option>
+                </select>
+                <button>GO</button>
+            </fieldset>
+        </form>    
+        <section class='main'>
+        <h2>무비차트 - 예매율순</h2>
+            <ol>
+                <li>
+                    <span>No.1</span>
+                    <div class="img_wrap">
+                        <img src="../images/no1.jpg" alt="no1" data-id="no1,서울의 봄,">
+                        <p class="age">12</p>
+                        <div clas="cgvflex">
+                            <p class="imax">IMAX</p>
+                            <p class="4dx">4DX</p>
+                            <p class="screenx">SCREENX</p>
                         </div>
+                    </div>
+                    <h3>서울의 봄</h3>
+                    <p>예매율 :<span class="ticketsales">52.2%</span></p>
+                    <p><span class="wrap">
+                            <span class="result"></span>
+                            <span class="tomato">99%</span>
+                        </span>
+                    </p>
+                   
+                        2023.11.22 개봉 예매
 
-                        <a href="#none">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_all.png" alt=""></div>
-                                <div class="screenType"><img src="img/imax_white.png" alt=""></div>
-                                <img src="img/chart01.jpg" alt="" class="movieThumbnail">
-                            </div>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+       
+        서울의 봄
+        예매율52.2%
+        99%
+        2023.11.22 개봉 예매
+        No.2 나폴레옹 포스터 15 IMAX 4DX SCREENX
+        나폴레옹
+        예매율8.2%
+        81%
+        2023.12.06 개봉 예매
+        No.3 3일의 휴가 포스터 12
+        3일의 휴가
+        예매율7.6%
+        92%
+        2023.12.06 개봉 예매
+        No.4 엔시티 네이션: 투 더 월드 인 시네마 포스터 All 4DX SCREENX
+        엔시티 네이션: 투 더 월드 인 시네마
+        예매율5.1%
+        91%
+        2023.12.06 개봉 예매
+        No.5 듄 포스터 12 IMAX
+        듄
+        예매율3.5%
+        92%
+        2023.12.06 재개봉 예매
+        No.6 괴물 포스터 12 아트하우스
+        괴물
+        예매율3.3%
+        95%
+        2023.11.29 개봉 예매
+        No.7 싱글 인 서울 포스터 12
+        싱글 인 서울
+        예매율2.8%
+        93%
+        2023.11.29 개봉 예매
+        
+        No.8 노량-죽음의 바다 포스터 12
+        노량-죽음의 바다
+        예매율2.7%
+        99%
+        2023.12.20 개봉 D-12 예매
+        No.9 SEVENTEEN TOUR ‘FOLLOW’ TO JAPAN ： LIVE VIEWING 포스터 12
+        SEVENTEEN TOUR ‘FOLLOW’ TO JAPAN ： LIVE VIEWING
+        예매율2.6%
+        99%
+        2023.12.16 개봉 D-8 예매
+        No.10 뽀로로 극장판 슈퍼스타 대모험 포스터 All
+        뽀로로 극장판 슈퍼스타 대모험
+        예매율2.4%
+        97%
+        2023.12.13 개봉 D-5 예매
+        No.11 마에스트로 번스타인 포스터 15
+        마에스트로 번스타인
+        예매율1.1%
+        87%
+        2023.12.06 개봉 예매
+        No.12 매직 프린세스-얼음 괴물과 사라진 열쇠의 비밀 포스터 All
+        매직 프린세스-얼음 괴물과 사라진 열쇠의 비밀
+        예매율1.0%
+        94%
+        2023.12.07 개봉 예매
+        No.13 비투비 타임: 비투게더 더 무비 포스터 All
+        비투비 타임: 비투게더 더 무비
+        예매율0.9%
+        99%
+        2023.11.15 개봉 예매
+        No.14 교토에서 온 편지 포스터 12 아트하우스
+        교토에서 온 편지
+        예매율0.9%
+        92%
+        2023.12.06 개봉 예매
+        No.15 홈그라운드 포스터 12 아트하우스
+        홈그라운드
+        예매율0.8%
+        83%
+        2023.12.06 개봉 예매
+        No.16 프레디의 피자가게 포스터 12
+        프레디의 피자가게
+        예매율0.5%
+        83%
+        2023.11.15 개봉 예매
+        No.17 나 혼자만 레벨업 프리뷰 포스터 18
+        나 혼자만 레벨업 프리뷰
+        예매율0.5%
+        99%
+        2023.12.13 개봉 D-5 예매
+        No.18 듄+듄:파트2 특별영상 포스터 18 IMAX
+        듄+듄:파트2 특별영상
+        예매율0.4%
+        ?
+        2023.12.08 개봉 예매
+        No.19 극장판 파워 디지몬 더 비기닝 포스터 12
+        극장판 파워 디지몬 더 비기닝
+        예매율0.3%
+        79%
+        2023.11.29 개봉 예매
+        더보기 더보기
+    </section>
 
-                            <strong class="movieName">[그대들은 어떻게 살 것인가] IMAX 포스터</strong>
-                            <span><img src="img/eggGoldenegg.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
 
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_15.png" alt=""></div>
-                                <img src="img/chart02.jpg" alt="" class="movieThumbnail">
-                            </div>
 
-                            <strong class="movieName">용감한 시민</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 9.3%</span>
-                        </a>
-                    </li>
 
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart03.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">소년들</strong>
-                            <span><img src="img/eggGoldeneggPreegg.png" alt="" class="egg">98%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart04.jpg" alt="" class="movieThumbnail">
-                            </div>
-                
-                            <strong class="movieName">30일</strong>
-                            <span><img src="img/eggGoldeneggPreegg.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_18.png" alt=""></div>
-                                <img src="img/chart05.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">플라워 킬링 문</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_18.png" alt=""></div>
-                                <img src="img/chart06.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">톡 투 미</strong>
-                            <span><img src="img/eggGoldeneggPreegg.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_15.png" alt=""></div>
-                                <img src="img/chart07.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">더 킬러</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart08.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">너와 나</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_all.png" alt=""></div>
-                                <img src="img/chart09.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">바람 따라 만나리 : 김호중의 계절</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_all.png" alt=""></div>
-                                <img src="img/chart10.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">빌리와 용감한 녀석들-황금 달걀 구조대</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_18.png" alt=""></div>
-                                <img src="img/chart11.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">시수</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart12.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">두 사람을 위한 식탁</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart13.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">라라랜드</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">99%</span>
-                            <span class="rate">예매율 64.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_15.png" alt=""></div>
-                                <img src="img/chart14.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">오픈 더 도어</strong>
-                            <span><img src="img/eggGoldenegg.png" alt="" class="egg">63%</span>
-                            <span class="rate">예매율 0.9%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart15.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">블루 자이언트</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">97%</span>
-                            <span class="rate">예매율 0.8%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_12.png" alt=""></div>
-                                <img src="img/chart16.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">화사한 그녀</strong>
-                            <span><img src="img/eggGoldenegg.png" alt="" class="egg">68%</span>
-                            <span class="rate">예매율 0.5%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_15.png" alt=""></div>
-                                <img src="img/chart17.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">스트릿 우먼 파이터2 파이널</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">?</span>
-                            <span class="rate">예매율 0.4%</span>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_15.png" alt=""></div>
-                                <img src="img/chart18.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">조커</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg">88%</span>
-                            <span class="rate">예매율 0.4%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_15.png" alt=""></div>
-                                <img src="img/chart19.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">그녀</strong>
-                            <span><img src="img/eggGoldeneggPreegg.png" alt="" class="egg">95%</span>
-                            <span class="rate">예매율 0.3%</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="detailView">
-                            <a href="" class="detail">상세보기</a>
-                            <a href="" class="ticket">예매하기</a>
-                        </div>
-                        <a href="">
-                            <div class="img_wrap">
-                                <div class="movieAge"><img src="img/age_all.png" alt=""></div>
-                                <img src="img/chart20.jpg" alt="" class="movieThumbnail">
-                            </div>
-
-                            <strong class="movieName">걸스 인 원더랜드 : 벤타엑스 브이알 뮤직시네마 02</strong>
-                            <span><img src="img/eggGoldenegggreat.png" alt="" class="egg"> ?</span>
-                            <span class="rate">예매율 0.2%</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
 
     </section>
 </main>

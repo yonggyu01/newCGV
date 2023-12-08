@@ -332,10 +332,17 @@ main{
     margin:2px;
 }
 .favorite_theater li em{
-    position: absolute; 
+    /* position: absolute;  */
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    box-sizing: border-box;
     font-size:12px;  
-    top:-12px;
-    right:2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* top:-12px;
+    right:2px; */
 }
 .more{
     margin-right:20px;
@@ -344,6 +351,8 @@ main{
     border-top: 2px solid #727171;
     border-bottom: 2px solid #727171;
     margin-top:15px;
+    position: relative;
+
 }
 .city_tit{
     display: flex; 
@@ -358,13 +367,19 @@ main{
     color:#fff;
 }
 .area{
-    position: absolute;
-    width: 854px;
+   
     margin-top:15px;
     display: none;
 }
+.area ul{
+    width: 854px;
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    left: 10px;
+}
 .area li{
-    float: left;
+
     font-size: 11px;
     color: #b9b9b9;
     line-height: 31px;
@@ -373,6 +388,7 @@ main{
 }
 .area li::after{
     content: '│';
+    margin-left: 10px;
 }
 
 
@@ -480,6 +496,7 @@ main{
 .timetable{
     width: 800px;
     border-top: 3px solid #241d1e;
+    position: relative;
 }
 .date{
     position: relative;
@@ -624,6 +641,7 @@ main{
     border-top: 2px solid #474746;
     border-bottom: 1px solid #474746;
     font-size: 12px;
+    /* position: relative; */
 
 }
     .timezone p{
@@ -657,7 +675,8 @@ main{
     z-index: 5;
     text-align: center;
     display: none;
-}
+    top:0;
+}   
    .arr{
         position: absolute;
         left: 50%;
