@@ -5,11 +5,12 @@
 /*fixedBtn*/
 .fixedBtn{
     position: fixed;
-    display: flex;
+    display: none;
     right:50%;
     bottom: 80px;
     z-index:3;
 }
+
     .btn_ticket{
         width: 136px;
         font-weight: 600;
@@ -416,6 +417,16 @@ video{
 .chart{
     background:#f7f7f7;
     padding: 60px 0 60px;
+    position: relative;;
+    height : 400px;
+}
+.chart2_wrap{
+    position: absolute;
+    top:97px;
+    left : 125px;
+    width: 980px;
+    margin: 0 auto;  
+    display: none;
 }
 .chart_wrap{
     position: relative;
@@ -428,7 +439,14 @@ video{
 .chart_tit h2{
     margin-right: 10px;
 }
-.chart_tit h2 ~ h2:before {
+.mchart a{
+    color:black;
+}
+.m2chart a{
+    color:gray;
+}
+
+/* .chart_tit h2 ~ h2:before {
     content: '';
     display: block;
     position: absolute;
@@ -444,7 +462,7 @@ video{
     font-size: 26px;
     color: #666;
     line-height: 1.423em;
-}
+} */
 .chart_tit .allView{
     position: absolute;
     top:5px;

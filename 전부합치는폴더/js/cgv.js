@@ -2,13 +2,15 @@ function imgchange(url){
    document.querySelector('#special_img').src = url 
 }
 window.onload =function(){
-    let chartnum=0,eventnum=0,automode=0,eventtime=0,autotimer;
+    let chartnum=0,chartnum2=0,eventnum=0,automode=0,eventtime=0,autotimer;
     document.querySelector('.familysite_list').style.display ='none'
     window.onclick = function(e){
     //    e.target.draggable = false
-        let slider = document.querySelector('.slide_list'),//
-        sliderli =document.querySelector('.chart .slide_list li').getBoundingClientRect().width,//
+        let slider = document.querySelector('.chart_wrap .slide_list'),//
+        sliderli2 =document.querySelector('.chart2_wrap .slide_list li').getBoundingClientRect().width,//
+        sliderli =document.querySelector('.chart_wrap .slide_list li').getBoundingClientRect().width,//
         eventslide =document.querySelector('.event_list'),//
+        slider2 = document.querySelector('.chart2_wrap .slide_list'),//
         eventli =document.querySelector('.event_list li').getBoundingClientRect().width,//      
         idchecker = e.target.id || e.target.classList.value;
         // console.log(idchecker)
@@ -28,6 +30,22 @@ window.onload =function(){
             case 'btn_soundOff' :
                 document.querySelector('.video1').muted = 1;
                 break;
+            case 'mchart':
+
+                e.target.parentElement.nextElementSibling.children[0].style.color = 'gray'
+                e.target.style.color='black'
+               document.querySelector('.slide_wrap').style.display = 'block'
+               document.querySelector('.chart2_wrap').style.display = 'none'
+               document.querySelector('.chart_wrap .slide_btn').style.display = 'block'
+            break;
+            case 'm2chart':
+            
+                e.target.parentElement.previousElementSibling.children[0].style.color = 'gray'
+                e.target.style.color='black'
+                document.querySelector('.chart2_wrap').style.display = 'block'
+                document.querySelector('.chart_wrap .slide_btn').style.display = 'none'
+                document.querySelector('.slide_wrap').style.display = 'none'
+            break;
             case 'chartpreb' : //차트 슬라이드 버튼  gap 30px임
                 ++chartnum
                 if(chartnum==0){ e.target.style.display = 'none'}
@@ -39,6 +57,20 @@ window.onload =function(){
                 if(chartnum==-3){ e.target.style.display = 'none'
                 slider.style.left = chartnum*((sliderli+30)*5)+'px'}else{
                     slider.style.left = chartnum*((sliderli+30)*5)+'px'
+                }
+                    e.target.previousElementSibling.style.display ='block'
+                break;
+            case 'chartpreb2' : //차트 슬라이드 버튼  gap 30px임
+                ++chartnum2
+                if(chartnum2==0){ e.target.style.display = 'none'}
+                slider2.style.left =chartnum2*((sliderli2+30)*5)+'px';
+                e.target.nextElementSibling.style.display ='block'
+                break;
+            case 'chartnextb2' :
+                --chartnum2
+                if(chartnum2==-3){ e.target.style.display = 'none'
+                slider2.style.left = chartnum2*((sliderli2+30)*5)+'px'}else{
+                    slider2.style.left = chartnum2*((sliderli2+30)*5)+'px'
                 }
                     e.target.previousElementSibling.style.display ='block'
                 break;
