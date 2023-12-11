@@ -82,11 +82,6 @@ day_list.forEach(function(item,idx){
 // 현재 날짜는 8개 있음 여기에 변경해야하는 것은 3개 항목임  요일 (한글)
 // 현재 월은 한번만 구해서 뿌려주면됨 ,   strong 부분에 현재 날짜를 뿌려야함 
 
-
-window.onclick=function(e){
-    
-    console.log(e)
-}
 document.querySelector('.grade').onclick =function(){   
     document.querySelector('.grade_popup').style.display = document.querySelector('.grade_popup').style.display== 'none' ?  'block' : 'none'
 }
@@ -95,32 +90,58 @@ document.querySelector('.grade_close').onclick=function(){
 }
 
 //minimap_area 가 지속적으로 움직여야함 내가 원하는 위치에 포지션에서 표시되어야함
+// 좌표를 받아와야하는데 현재 내가 움직일 요소의 고정 좌표를 받아오기만 하면됨
+// 
 let minimap_area= document.querySelector('.minimap_area')
-let timetable= document.querySelector('.timetable')
 let page
-let info_time = document.querySelectorAll('.info_time')
+let info_time = document.querySelectorAll('.info_time>li')
 let npix = /\n/g
 let txt2 =document.querySelector('.txt2')
 info_time.forEach(function(item,idx){
     item.onmouseenter=function(e){
-        console.log(e.pageY,page)
-        let title =(e.target.previousElementSibling.innerText).replace(npix,' ')
+        let title =(e.target.parentElement.previousElementSibling.innerText).replace(npix,' ')
         txt2.innerText = title
+        // minimap_area.style.display = 'block'
+        // minimap_area.style.top= (e.pageY+item.getBoundingClientRect().height+180-timetable.getBoundingClientRect().height)+'px'
+        /*기존 함수 구성으로는 위 수식으로 해야 그나마 비슷한 느낌이 남,  태그와 css좀 수정했음 이제 offsettop으로 상대좌표가 변동하도록 해놨음 부모 하나에게만 포지션이 있어서 아래의 요소들이  좌표를 정상적으로 주도록 바꿈  */
         minimap_area.style.display = 'block'
-        minimap_area.style.top= (e.pageY+item.getBoundingClientRect().height+180-timetable.getBoundingClientRect().height)+'px'
-        // minimap_area.style.top= (e.pageY-page -330 )+'px' 
+        minimap_area.style.top=info_time[idx].offsetTop-(minimap_area.getBoundingClientRect().height/4)+'px'
     }
     item.onmouseleave=function(){
         minimap_area.style.display= 'none'
     }
 })
 // 글자를 가져와서 뿌려줘야함 minimap에 내용을 바꿔가며 뿌려줘야함
+//document.querySelector('.minimap_area').style.top=document.querySelectorAll('.info_time>li')[3].offsetTop-(document.querySelector('.minimap_area').getBoundingClientRect().height/4)+'px'
+// 태그를 좀 손봐서 부모요소중에 최상위의 딱 한개에만  포지션 relate..를 줘서 내가 지정한 
+//요소의 offsetTop값을 상대값으로 받아올 수 있어야함 -> 기존태그 구성으로는 불가능함 
+// 태그 구성 및 css를 손봐서 조정했음   다시 함수를 구성하면 
 
 window.onscroll=function(){
 page = window.pageYOffset
 }
-
-
+// wrapboxinf   -> info 를 여러개로 만들게되면   wrapboxinf높이값도 강제로 바꿔줘야함  날짜 클릭해서 바뀔때마다  
+let info = document.querySelectorAll('.info')
+let wrapboxheight = document.querySelector('.wrapboxinf')
+info[0].style.display = 'block'
+document.querySelectorAll('.day>li').forEach(function(item,idx){
+    item.onmouseenter = function(){
+        info[idx].style.display = 'block'
+        wrapboxheight.style.height = (info[idx].children.length * info[idx].children[0].getBoundingClientRect().height) + 'px'
+        for(i=0; i<info.length; i++){
+            if(idx != i){
+             info[i].style.display = 'none'
+            }
+        }
+    }
+    item.onmouseleave=function(){
+        for(i=0; i<info.length; i++){
+            if(idx != i){
+             info[i].style.display = 'none'
+            }
+        }
+    }
+})
 
 
 }

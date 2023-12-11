@@ -357,6 +357,7 @@ main{
 .city_tit{
     display: flex; 
     justify-content: space-between; 
+    align-items: center;
 }
 .city_tit > li{
     font-size: 14px;
@@ -367,8 +368,6 @@ main{
     color:#fff;
 }
 .area{
-   
-    margin-top:15px;
     display: none;
 }
 .area ul{
@@ -377,6 +376,7 @@ main{
     flex-flow: row wrap;
     position: absolute;
     left: 10px;
+    top:60px
 }
 .area li{
 
@@ -492,6 +492,7 @@ main{
     margin-top:50px;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 .timetable{
     width: 800px;
@@ -712,21 +713,30 @@ main{
         font-weight:600;
         padding: 5px;
    }
-
+   .wrapboxinf{
+    position: relative;
+    height: 1520px;
+   }
 .info{
     line-height: 1.3em;
+      position: absolute;
+display :none;
 }  
 .info > li{
-    border-bottom: 1px solid #474746;
+    border-bottom: 1px solid #181815;
 }
 .info_movie{
-    position: relative;
+  
     padding: 40px 0;
 } 
+.movienamewrap{
+    display:flex; gap: 10px;
+
+}
     .movieName{
-        position: absolute;
-        top:40px;
-        left:28px;  
+        /* position: absolute; */
+        /* top:40px;
+        left:28px;   */
         font-size:16px;
         color: #333333;
         font-weight: 600;
